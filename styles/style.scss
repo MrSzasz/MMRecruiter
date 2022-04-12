@@ -4,3 +4,84 @@ $black: 000;
 
 
 //=============================================  FONTS  =============================================//
+
+
+//=============================================  HTML  =============================================//
+
+::selection {
+    background-color: red;
+    color: blue;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    display: grid;
+    grid-template-rows: min-content auto 15%;
+}
+
+//=============================================  HEADER  =============================================//
+header {
+    grid-row: 1/2;
+}
+
+//=============================================  INDEX  =============================================//
+
+main {
+    display: grid;
+    grid-row: 2/3;
+    grid-template-columns: 10% 80% 10%;
+
+    .welcome {
+        height: 500px;
+        width: 100%;
+        grid-column: 1/4;
+        background-color: red;
+    }
+
+    .mainContent {
+        grid-column: 2/3;
+
+        section {
+            display: flex;
+
+            .imgText {
+                height: 200px;
+                width: 200px;
+                background-color: purple;
+            }
+
+            p {
+                width: auto;
+                text-align: justify;
+            }
+        }
+
+        .cardContainer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: min-content;
+        }
+        .brands{
+            height: 150px;
+            width: 100%;
+            background-color: yellowgreen;
+        }
+
+    }
+}
+
+
+//=============================================  ABOUT US  =============================================//
+
+//=============================================  CONTACT  =============================================//
+
+//=============================================  FOOTER  =============================================//
+
+footer {
+    background-color: green;
+    margin-top: 20px;
+}
