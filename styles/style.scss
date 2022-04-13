@@ -39,6 +39,11 @@ main {
     grid-template-columns: 10% 80% 10%;
 
     .mainImg {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 35px;
         height: 500px;
         width: 100%;
         grid-column: 1/4;
@@ -46,6 +51,12 @@ main {
     }
 
     .mainContent {
+        margin: 50px 0 50px 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
         grid-column: 2/3;
 
         section {
@@ -107,18 +118,18 @@ main {
         }
 
         .brands {
-            height: 150px;
+            height: min-content;
             width: 100%;
             background-color: yellowgreen;
 
             .contenedordemarcas {
                 display: flex;
-                justify-content: center;
                 align-items: center;
+                gap: 15px;
             }
 
             .prueba {
-                height: 100px;
+                height: 200px;
                 width: 30%;
                 margin: auto;
                 background-color: cyan;
@@ -134,10 +145,10 @@ main {
 //=============================================  CONTACT  =============================================//
 
 form {
+    width: 100%;
     padding: 20px;
     margin-top: 20px;
     height: min-content;
-    grid-column: 2/3;
     background-color: wheat;
     display: flex;
     flex-direction: column;
@@ -152,9 +163,15 @@ form {
     .form-control {
         letter-spacing: 2px;
     }
+
+    span{
+        font-style: italic;
+        font-size: 15px;
+    }
 }
 
 .peopleWhoTrust {
+    width: 100%;
     height: 300px;
     grid-column: 2/3;
     background-color: rebeccapurple;
@@ -183,66 +200,12 @@ footer {
         justify-content: center;
         align-items: center;
         background-color: green;
-        margin-top: 20px;
     }
 
     .textFooter {
         height: min-content;
         width: 30%;
         text-align: justify;
-    }
-
-    .cssbuttons-io-button {
-        background: #A370F0;
-        color: white;
-        font-family: inherit;
-        padding: 0.35em;
-        padding-left: 1.2em;
-        font-size: 17px;
-        font-weight: 500;
-        border-radius: 0.9em;
-        border: none;
-        letter-spacing: 0.05em;
-        display: flex;
-        align-items: center;
-        box-shadow: inset 0 0 1.6em -0.6em #714da6;
-        overflow: hidden;
-        position: relative;
-        height: 2.8em;
-        padding-right: 3.3em;
-    }
-
-    .cssbuttons-io-button .icon {
-        background: white;
-        margin-left: 1em;
-        position: absolute;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 2.2em;
-        width: 2.2em;
-        border-radius: 0.7em;
-        box-shadow: 0.1em 0.1em 0.6em 0.2em #7b52b9;
-        right: 0.3em;
-        transition: all 0.3s;
-    }
-
-    .cssbuttons-io-button:hover .icon {
-        width: calc(100% - 0.6em);
-    }
-
-    .cssbuttons-io-button .icon svg {
-        width: 1.1em;
-        transition: transform 0.3s;
-        color: #7b52b9;
-    }
-
-    .cssbuttons-io-button:hover .icon svg {
-        transform: translateX(0.1em);
-    }
-
-    .cssbuttons-io-button:active .icon {
-        transform: scale(0.95);
     }
 
     .footerDev {
@@ -258,4 +221,57 @@ footer {
         flex-direction: column;
         gap: 10px;
     }
+}
+
+.cssbuttons-io-button {
+    background: #A370F0;
+    color: white;
+    font-family: inherit;
+    padding: 0.35em;
+    padding-left: 1.2em;
+    font-size: 17px;
+    font-weight: 500;
+    border-radius: 0.9em;
+    border: none;
+    letter-spacing: 0.05em;
+    display: flex;
+    align-items: center;
+    box-shadow: inset 0 0 1.6em -0.6em #714da6;
+    overflow: hidden;
+    position: relative;
+    height: 2.8em;
+    padding-right: 3.3em;
+}
+
+.cssbuttons-io-button .icon {
+    background: white;
+    margin-left: 1em;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2.2em;
+    width: 2.2em;
+    border-radius: 0.7em;
+    box-shadow: 0.1em 0.1em 0.6em 0.2em #7b52b9;
+    right: 0.3em;
+    transition: all 0.3s;
+}
+
+.cssbuttons-io-button:hover .icon {
+    width: calc(100% - 0.6em);
+}
+
+.cssbuttons-io-button .icon svg {
+    width: 1.1em;
+    transition: transform 0.3s;
+    color: #7b52b9;
+}
+
+.cssbuttons-io-button:hover .icon svg {
+    transform: translateX(0.1em);
+}
+
+.cssbuttons-io-button:active .icon {
+    transform: scale(0.95);
 }
