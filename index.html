@@ -45,9 +45,11 @@
     <!-- ========================================  MAIN  ======================================== -->
 
     <main class="text-center">
-        <div class="welcome"></div>
+        <div class="jumbotron mainImg text-center">
+            <h1>MMRECRUITER</h1>
+            <p>BIENVENIDOS</p>
+        </div>
         <div class="mainContent">
-            <h1>BIENVENIDOS</h1>
             <h2>------------------------- nosotros -------------------------</h2>
             <div class="imgAndText">
                 <section>
@@ -121,25 +123,25 @@
             </div>
             <h2>------------------------- Porque elegirnos -------------------------</h2>
             <div class="cardContainer">
-                <div class="card" style="width: 18rem;">
-                    <img class="card-img-top" src="..." alt="Card image cap">
+                <div class="card">
                     <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk
                             of
                             the card's content.</p>
                     </div>
                 </div>
-                <div class="card" style="width: 18rem;">
-                    <img class="card-img-top" src="..." alt="Card image cap">
+                <div class="card">
                     <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk
                             of
                             the card's content.</p>
                     </div>
                 </div>
-                <div class="card" style="width: 18rem;">
-                    <img class="card-img-top" src="..." alt="Card image cap">
+                <div class="card">
                     <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk
                             of
                             the card's content.</p>
@@ -147,12 +149,74 @@
                 </div>
             </div>
             <h2>------------------------- Marcas que confían en nosotros -------------------------</h2>
-            <div class="brands"></div>
+            <div class="brands">
+                <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="contenedordemarcas">
+                                <div class="prueba"></div>
+                                <div class="prueba"></div>
+                                <div class="prueba"></div>
+                                <div class="prueba"></div>
+                                <div class="prueba"></div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="contenedordemarcas">
+                                <div class="prueba"></div>
+                                <div class="prueba"></div>
+                                <div class="prueba"></div>
+                                <div class="prueba"></div>
+                                <div class="prueba"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="brands">
+                <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <img src="..." class="d-block w-100" alt="...">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="..." class="d-block w-100" alt="...">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="..." class="d-block w-100" alt="...">
+                      </div>
+                    </div>
+                  </div>
+            </div> -->
     </main>
 
     <!-- ========================================  FOOTER  ======================================== -->
 
-    <footer></footer>
+    <footer>
+        <div class="footerContent">
+            <div class="footerItem">
+                <div class="logoFooter navbar-brand">MMRECRUITER</div>
+                <p class="textFooter">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugit dolor distinctio
+                    eveniet atque natus
+                    inventore.</p>
+            </div>
+            <div class="footerItem">
+                <h2>CONTACTO</h2>
+                <button class="cssbuttons-io-button"> CONTACTANOS
+                    <div class="icon">
+                        <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 0h24v24H0z" fill="none"></path>
+                            <path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"
+                                fill="currentColor"></path>
+                        </svg>
+                    </div>
+                </button>
+            </div>
+        </div>
+        <div class="footerDev">
+            hola somos los devs!
+        </div>
+    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
