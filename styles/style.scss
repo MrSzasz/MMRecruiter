@@ -19,7 +19,8 @@ html {
 
 body {
     display: grid;
-    grid-template-rows: min-content auto 10%;
+    height: max-content;
+    grid-template-rows: min-content auto min-content;
 }
 
 //=============================================  HEADER  =============================================//
@@ -139,6 +140,67 @@ main {
     }
 }
 
+//========================================  MEDIA QUERIES  ========================================//
+
+@media only screen and (max-width: 769px) {
+    section {
+        display: flex;
+        flex-direction: column;
+
+        .imgText {
+            height: 100%;
+            width: 100%;
+        }
+
+        p {
+            width: auto;
+            text-align: justify;
+            line-height: 28px;
+        }
+
+        .right {
+            display: flex;
+            flex-direction: column-reverse;
+        }
+    }
+
+    .cardContainer {
+        width: 90%;
+        flex-wrap: wrap;
+    }
+
+    .contenedordemarcas {
+        flex-wrap: wrap;
+    }
+
+    .prueba {
+        height: 100px !important;
+    }
+}
+
+@media only screen and (max-width: 426px) {
+    .imgAndText{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .mainImg {
+        text-align: center;
+
+        h1 {
+            font-size: 50px;
+        }
+    }
+    section {
+        p {
+            // width: 80%;
+            padding: 0 10% 0 10%;
+        }
+    }
+}
+
 
 //=============================================  ABOUT US  =============================================//
 
@@ -164,7 +226,7 @@ form {
         letter-spacing: 2px;
     }
 
-    span{
+    span {
         font-style: italic;
         font-size: 15px;
     }
@@ -192,14 +254,17 @@ form {
 
 footer {
     display: grid;
+    height: min-content;
     grid-template-rows: auto 20px;
+    grid-template-columns: 10% auto 10%;
+    background-color: green;
 
     .footerContent {
         grid-row: 1/2;
+        grid-column: 2/3;
         display: flex;
         justify-content: center;
         align-items: center;
-        background-color: green;
     }
 
     .textFooter {
@@ -210,6 +275,7 @@ footer {
 
     .footerDev {
         grid-row: 2/3;
+        grid-column: 1/4;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -220,6 +286,31 @@ footer {
         display: flex;
         flex-direction: column;
         gap: 10px;
+    }
+}
+
+//========================================  MEDIA QUERIES  ========================================//
+
+@media only screen and (max-width: 767px) {
+    .footerItem {
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .textFooter {
+        width: 100% !important;
+    }
+
+    .footerContent {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .footerDev {
+        padding: 20px;
+        margin-top: 20px;
     }
 }
 
