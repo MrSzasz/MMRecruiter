@@ -60,24 +60,32 @@ main {
         gap: 50px;
         grid-column: 2/3;
 
-        section {
+        .imgAndText {
             display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
             gap: 20px;
 
-            .imgText {
-                height: 400px;
-                min-width: 400px;
-                background-color: purple;
-            }
-
-            p {
-                width: auto;
-                text-align: justify;
-            }
-
-            .right {
+            section {
                 display: flex;
                 gap: 20px;
+
+                .imgText {
+                    height: 400px;
+                    min-width: 400px;
+                    background-color: purple;
+                }
+
+                p {
+                    width: auto;
+                    text-align: justify;
+                }
+
+                .right {
+                    display: flex;
+                    gap: 20px;
+                }
             }
         }
 
@@ -204,8 +212,10 @@ main {
 
 
 //=============================================  ABOUT US  =============================================//
+
 .mainContent {
     height: min-content;
+
     .contentTop {
         width: 100%;
         height: min-content;
@@ -222,7 +232,8 @@ main {
             background-color: yellow;
             height: 100%;
             width: 100%;
-            p{
+
+            p {
                 text-align: justify;
                 padding: 0 20px 0 20px;
             }
@@ -253,12 +264,56 @@ main {
     .contentTop {
         height: min-content;
         flex-direction: column;
-        .infoLeft{
+
+        .infoLeft {
             height: 100px;
         }
     }
+
     .contentBottom {
         flex-wrap: wrap;
+    }
+}
+
+
+//=============================================  SERVICES  =============================================//
+
+.mainContent {
+    .roadMap {
+        height: min-content;
+        width: 100%;
+        background-color: wheat;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 70px;
+        padding: 20px;
+        text-align: center;
+
+        .step {
+            background-color: lightgrey;
+            height: min-content;
+            width: 80%;
+        }
+
+        .arrowStep {
+            background-color: olivedrab;
+
+            i {
+                font-size: 70px;
+            }
+        }
+    }
+
+    .contact {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: red;
+        padding: 20px;
+        gap: 20px;
     }
 }
 
@@ -289,6 +344,10 @@ form {
         font-style: italic;
         font-size: 15px;
     }
+
+    input {
+        width: 100%;
+    }
 }
 
 .peopleWhoTrust {
@@ -305,8 +364,14 @@ form {
         align-items: center;
         row-gap: 10px;
     }
+}
 
+//========================================  MEDIA QUERIES  ========================================//
 
+@media only screen and (max-width: 426px) {
+    .form-group {
+        width: 100% !important;
+    }
 }
 
 //=============================================  FOOTER  =============================================//
