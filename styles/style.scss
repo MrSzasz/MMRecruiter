@@ -179,7 +179,7 @@ main {
 }
 
 @media only screen and (max-width: 426px) {
-    .imgAndText{
+    .imgAndText {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -193,6 +193,7 @@ main {
             font-size: 50px;
         }
     }
+
     section {
         p {
             // width: 80%;
@@ -203,6 +204,64 @@ main {
 
 
 //=============================================  ABOUT US  =============================================//
+.mainContent {
+    height: min-content;
+    .contentTop {
+        width: 100%;
+        height: min-content;
+        background-color: green;
+        display: flex;
+
+        .infoLeft {
+            min-height: 250px;
+            min-width: 200px;
+            background-color: red;
+        }
+
+        .infoRight {
+            background-color: yellow;
+            height: 100%;
+            width: 100%;
+            p{
+                text-align: justify;
+                padding: 0 20px 0 20px;
+            }
+        }
+    }
+
+    .contentBottom {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+        height: min-content;
+        background-color: rebeccapurple;
+        gap: 20px;
+
+        .studies {
+            height: 100px;
+            min-width: 100px;
+            background-color: black;
+        }
+    }
+}
+
+
+//========================================  MEDIA QUERIES  ========================================//
+
+@media only screen and (max-width: 426px) {
+    .contentTop {
+        height: min-content;
+        flex-direction: column;
+        .infoLeft{
+            height: 100px;
+        }
+    }
+    .contentBottom {
+        flex-wrap: wrap;
+    }
+}
+
 
 //=============================================  CONTACT  =============================================//
 
