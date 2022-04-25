@@ -1,4 +1,4 @@
-.disclaimer{
+.disclaimer {
     display: none;
 }
 
@@ -57,99 +57,103 @@ main {
 
     .mainContent {
         margin: 50px 0 50px 0;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 50px;
         grid-column: 2/3;
 
-        .imgAndText {
+        #mainIndex {
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
-            flex-direction: column;
-            gap: 20px;
+            gap: 50px;
 
-            section {
+            .imgAndText {
                 display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
                 gap: 20px;
 
-                .imgText {
-                    height: 400px;
-                    min-width: 400px;
-                    background-color: purple;
-                }
-
-                p {
-                    width: auto;
-                    text-align: justify;
-                }
-
-                .right {
+                section {
                     display: flex;
                     gap: 20px;
-                }
-            }
-        }
 
-        .cardContainer {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: min-content;
-            gap: 15px;
-            margin: 20px 0 20px 0;
+                    .imgText {
+                        height: 400px;
+                        min-width: 400px;
+                        background-color: purple;
+                    }
 
-            .card {
-                position: relative;
-                height: 350px;
-                width: 250px;
-                background-color: red;
+                    p {
+                        width: auto;
+                        text-align: justify;
+                    }
 
-                .card-body {
-                    transition: ease all .50s;
-                    position: absolute;
-                    height: 0%;
-                    bottom: 0%;
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                    justify-content: center;
-                    background-color: rgba(0, 0, 0, 0.4);
-                    overflow: hidden;
-                    opacity: 0;
-                }
-
-                &:hover {
-                    .card-body {
-                        height: 100%;
-                        opacity: 1;
+                    .right {
+                        display: flex;
+                        gap: 20px;
                     }
                 }
             }
-        }
 
-        .brands {
-            height: min-content;
-            width: 100%;
-            background-color: yellowgreen;
-
-            .contenedordemarcas {
+            .cardContainer {
                 display: flex;
+                justify-content: center;
                 align-items: center;
+                height: min-content;
                 gap: 15px;
+                margin: 20px 0 20px 0;
+
+                .card {
+                    position: relative;
+                    height: 350px;
+                    width: 250px;
+                    background-color: red;
+
+                    .card-body {
+                        transition: ease all .50s;
+                        position: absolute;
+                        height: 0%;
+                        bottom: 0%;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        background-color: rgba(0, 0, 0, 0.4);
+                        overflow: hidden;
+                        opacity: 0;
+                    }
+
+                    &:hover {
+                        .card-body {
+                            height: 100%;
+                            opacity: 1;
+                        }
+                    }
+                }
             }
 
-            .prueba {
-                height: 200px;
-                width: 30%;
-                margin: auto;
-                background-color: cyan;
-                border: 2px solid black;
+            .brands {
+                height: min-content;
+                width: 100%;
+                background-color: yellowgreen;
+
+                .contenedordemarcas {
+                    display: flex;
+                    align-items: center;
+                    gap: 15px;
+                }
+
+                .prueba {
+                    height: 200px;
+                    width: 30%;
+                    margin: auto;
+                    background-color: cyan;
+                    border: 2px solid black;
+                }
             }
         }
     }
+
 }
 
 //========================================  MEDIA QUERIES  ========================================//
@@ -220,45 +224,55 @@ main {
 .mainContent {
     height: min-content;
 
-    .contentTop {
-        width: 100%;
-        height: min-content;
-        background-color: green;
+    #mainAboutUs {
         display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+        margin: 50px 0 50px 0;
 
-        .infoLeft {
-            min-height: 250px;
-            min-width: 200px;
-            background-color: red;
+        .contentTop {
+            width: 100%;
+            height: min-content;
+            background-color: green;
+            display: flex;
+
+            .infoLeft {
+                min-height: 250px;
+                min-width: 200px;
+                background-color: red;
+            }
+
+            .infoRight {
+                background-color: yellow;
+                height: 100%;
+                width: 100%;
+
+                p {
+                    text-align: justify;
+                    padding: 0 20px 0 20px;
+                }
+            }
         }
 
-        .infoRight {
-            background-color: yellow;
-            height: 100%;
+        .contentBottom {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
             width: 100%;
+            height: min-content;
+            background-color: rebeccapurple;
+            gap: 20px;
 
-            p {
-                text-align: justify;
-                padding: 0 20px 0 20px;
+            .studies {
+                height: 100px;
+                min-width: 100px;
+                background-color: black;
             }
         }
     }
 
-    .contentBottom {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        width: 100%;
-        height: min-content;
-        background-color: rebeccapurple;
-        gap: 20px;
-
-        .studies {
-            height: 100px;
-            min-width: 100px;
-            background-color: black;
-        }
-    }
 }
 
 
@@ -283,92 +297,110 @@ main {
 //=============================================  SERVICES  =============================================//
 
 .mainContent {
-    .roadMap {
-        height: min-content;
-        width: 100%;
-        background-color: wheat;
+    #mainServices {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        gap: 70px;
-        padding: 20px;
-        text-align: center;
+        gap: 50px;
+        margin: 50px 0 50px 0;
 
-        .step {
-            background-color: lightgrey;
+        .roadMap {
             height: min-content;
-            width: 80%;
-        }
+            width: 100%;
+            background-color: wheat;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 70px;
+            padding: 20px;
+            text-align: center;
 
-        .arrowStep {
-            background-color: olivedrab;
+            .step {
+                background-color: lightgrey;
+                height: min-content;
+                width: 80%;
+            }
 
-            i {
-                font-size: 70px;
+            .arrowStep {
+                background-color: olivedrab;
+
+                i {
+                    font-size: 70px;
+                }
             }
         }
-    }
 
-    .contact {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        background-color: red;
-        padding: 20px;
-        gap: 20px;
+        .contact {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: red;
+            padding: 20px;
+            gap: 20px;
+        }
     }
 }
 
 
 //=============================================  CONTACT  =============================================//
-
-form {
-    width: 100%;
-    padding: 20px;
-    margin-top: 20px;
-    height: min-content;
-    background-color: wheat;
+#mainContact {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 25px;
+    gap: 50px;
+    margin: 50px 0 50px 0;
 
-    .form-group {
-        width: 60%;
-    }
-
-    .form-control {
-        letter-spacing: 2px;
-    }
-
-    span {
-        font-style: italic;
-        font-size: 15px;
-    }
-
-    input {
+    form {
         width: 100%;
-    }
-}
-
-.peopleWhoTrust {
-    width: 100%;
-    height: 300px;
-    grid-column: 2/3;
-    background-color: rebeccapurple;
-    margin-top: 20px;
-
-    .commentary {
+        padding: 20px;
+        margin-top: 20px;
+        height: min-content;
+        background-color: wheat;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        row-gap: 10px;
+        gap: 25px;
+
+        .form-group {
+            width: 60%;
+        }
+
+        .form-control {
+            letter-spacing: 2px;
+        }
+
+        span {
+            font-style: italic;
+            font-size: 15px;
+        }
+
+        input {
+            width: 100%;
+        }
+    }
+
+    .peopleWhoTrust {
+        width: 100%;
+        height: 300px;
+        grid-column: 2/3;
+        background-color: rebeccapurple;
+        margin-top: 20px;
+
+        .commentary {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            row-gap: 10px;
+        }
     }
 }
+
 
 //========================================  MEDIA QUERIES  ========================================//
 
