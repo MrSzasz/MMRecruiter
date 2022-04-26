@@ -21,8 +21,8 @@ $font: #1A132F;
 //=============================================  HTML  =============================================//
 
 ::selection {
-    background-color: $font;
-    color: $backgroundColor;
+    background-color: red;
+    color: blue;
 }
 
 html {
@@ -33,7 +33,6 @@ body {
     display: grid;
     height: max-content;
     grid-template-rows: min-content auto min-content;
-    background-color: $backgroundColor;
 }
 
 //=============================================  HEADER  =============================================//
@@ -43,14 +42,6 @@ header {
     top: 0%;
     grid-row: 1/2;
     z-index: 100;
-    background-color: $color3;
-
-    .navbar {
-        a {
-            color: $font;
-            font-weight: 500;
-        }
-    }
 }
 
 //=============================================  INDEX  =============================================//
@@ -74,102 +65,99 @@ main {
 
     .mainContent {
         margin: 50px 0 50px 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
         grid-column: 2/3;
 
-        #mainIndex {
+        .imgAndText {
             display: flex;
-            flex-direction: column;
             justify-content: center;
             align-items: center;
-            gap: 50px;
+            flex-direction: column;
+            gap: 20px;
 
-            .imgAndText {
+            section {
                 display: flex;
-                justify-content: center;
-                align-items: center;
-                flex-direction: column;
                 gap: 20px;
 
-                section {
+                .imgText {
+                    height: 400px;
+                    min-width: 400px;
+                    background-color: purple;
+                }
+
+                p {
+                    width: auto;
+                    text-align: justify;
+                }
+
+                .right {
                     display: flex;
                     gap: 20px;
-
-                    .imgText {
-                        height: 400px;
-                        min-width: 400px;
-                        background-color: purple;
-                    }
-
-                    p {
-                        width: auto;
-                        text-align: justify;
-                    }
-
-                    .right {
-                        display: flex;
-                        gap: 20px;
-                    }
-                }
-            }
-
-            .cardContainer {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                height: min-content;
-                gap: 15px;
-                margin: 20px 0 20px 0;
-
-                .card {
-                    position: relative;
-                    height: 350px;
-                    width: 250px;
-                    background-color: red;
-
-                    .card-body {
-                        transition: ease all .50s;
-                        position: absolute;
-                        height: 0%;
-                        bottom: 0%;
-                        display: flex;
-                        flex-direction: column;
-                        align-items: center;
-                        justify-content: center;
-                        background-color: rgba(0, 0, 0, 0.4);
-                        overflow: hidden;
-                        opacity: 0;
-                    }
-
-                    &:hover {
-                        .card-body {
-                            height: 100%;
-                            opacity: 1;
-                        }
-                    }
-                }
-            }
-
-            .brands {
-                height: min-content;
-                width: 100%;
-
-                .contenedordemarcas {
-                    display: flex;
-                    align-items: center;
-                    gap: 15px;
-                }
-
-                .prueba {
-                    height: 200px;
-                    width: 30%;
-                    margin: auto;
-                    background-color: cyan;
-                    border: 2px solid black;
                 }
             }
         }
-    }
 
+        .cardContainer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: min-content;
+            gap: 15px;
+            margin: 20px 0 20px 0;
+
+            .card {
+                position: relative;
+                height: 350px;
+                width: 250px;
+                background-color: red;
+
+                .card-body {
+                    transition: ease all .50s;
+                    position: absolute;
+                    height: 0%;
+                    bottom: 0%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    background-color: rgba(0, 0, 0, 0.4);
+                    overflow: hidden;
+                    opacity: 0;
+                }
+
+                &:hover {
+                    .card-body {
+                        height: 100%;
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+
+        .brands {
+            height: min-content;
+            width: 100%;
+            background-color: yellowgreen;
+
+            .contenedordemarcas {
+                display: flex;
+                align-items: center;
+                gap: 15px;
+            }
+
+            .prueba {
+                height: 200px;
+                width: 30%;
+                margin: auto;
+                background-color: cyan;
+                border: 2px solid black;
+            }
+        }
+    }
 }
 
 //========================================  MEDIA QUERIES  ========================================//
@@ -228,6 +216,7 @@ main {
 
     section {
         p {
+            // width: 80%;
             padding: 0 10% 0 10%;
         }
     }
@@ -239,52 +228,45 @@ main {
 .mainContent {
     height: min-content;
 
-    #mainAboutUs {
+    .contentTop {
+        width: 100%;
+        height: min-content;
+        background-color: green;
         display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 50px;
-        margin: 50px 0 50px 0;
 
-        .contentTop {
-            width: 100%;
-            height: min-content;
-            display: flex;
-
-            .infoLeft {
-                min-height: 250px;
-                min-width: 200px;
-                background-color: red;
-            }
-
-            .infoRight {
-                height: 100%;
-                width: 100%;
-
-                p {
-                    text-align: justify;
-                    padding: 0 20px 0 20px;
-                }
-            }
+        .infoLeft {
+            min-height: 250px;
+            min-width: 200px;
+            background-color: red;
         }
 
-        .contentBottom {
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
+        .infoRight {
+            background-color: yellow;
+            height: 100%;
             width: 100%;
-            height: min-content;
-            gap: 20px;
 
-            .studies {
-                height: 100px;
-                min-width: 100px;
-                background-color: black;
+            p {
+                text-align: justify;
+                padding: 0 20px 0 20px;
             }
         }
     }
 
+    .contentBottom {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+        height: min-content;
+        background-color: rebeccapurple;
+        gap: 20px;
+
+        .studies {
+            height: 100px;
+            min-width: 100px;
+            background-color: black;
+        }
+    }
 }
 
 
@@ -309,107 +291,92 @@ main {
 //=============================================  SERVICES  =============================================//
 
 .mainContent {
-    #mainServices {
+    .roadMap {
+        height: min-content;
+        width: 100%;
+        background-color: wheat;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        gap: 50px;
-        margin: 50px 0 50px 0;
+        gap: 70px;
+        padding: 20px;
+        text-align: center;
 
-        .roadMap {
+        .step {
+            background-color: lightgrey;
             height: min-content;
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            gap: 70px;
-            padding: 20px;
-            text-align: center;
-
-            .step {
-                background-color: lightgrey;
-                height: min-content;
-                width: 80%;
-            }
-
-            .arrowStep {
-                background-color: olivedrab;
-
-                i {
-                    font-size: 70px;
-                }
-            }
+            width: 80%;
         }
 
-        .contact {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
-            gap: 20px;
+        .arrowStep {
+            background-color: olivedrab;
+
+            i {
+                font-size: 70px;
+            }
         }
+    }
+
+    .contact {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: red;
+        padding: 20px;
+        gap: 20px;
     }
 }
 
 
 //=============================================  CONTACT  =============================================//
-#mainContact {
+
+form {
+    width: 100%;
+    padding: 20px;
+    margin-top: 20px;
+    height: min-content;
+    background-color: wheat;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 50px;
-    margin: 50px 0 50px 0;
+    gap: 25px;
 
-    form {
+    .form-group {
+        width: 60%;
+    }
+
+    .form-control {
+        letter-spacing: 2px;
+    }
+
+    span {
+        font-style: italic;
+        font-size: 15px;
+    }
+
+    input {
         width: 100%;
-        padding: 20px;
-        margin-top: 20px;
-        height: min-content;
+    }
+}
+
+.peopleWhoTrust {
+    width: 100%;
+    height: 300px;
+    grid-column: 2/3;
+    background-color: rebeccapurple;
+    margin-top: 20px;
+
+    .commentary {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        gap: 25px;
-
-        .form-group {
-            width: 60%;
-        }
-
-        .form-control {
-            letter-spacing: 2px;
-        }
-
-        span {
-            font-style: italic;
-            font-size: 15px;
-        }
-
-        input {
-            width: 100%;
-        }
-    }
-
-    .peopleWhoTrust {
-        width: 100%;
-        height: 300px;
-        grid-column: 2/3;
-        background-color: $color3;
-        margin-top: 20px;
-
-        .commentary {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            row-gap: 10px;
-        }
+        row-gap: 10px;
     }
 }
-
 
 //========================================  MEDIA QUERIES  ========================================//
 
@@ -426,7 +393,7 @@ footer {
     height: min-content;
     grid-template-rows: auto 20px;
     grid-template-columns: 10% auto 10%;
-    background-color: $color3;
+    background-color: green;
 
     .footerContent {
         grid-row: 1/2;
@@ -448,7 +415,7 @@ footer {
         display: flex;
         justify-content: center;
         align-items: center;
-        background-color: $color3;
+        background-color: green;
     }
 
     .footerItem {
