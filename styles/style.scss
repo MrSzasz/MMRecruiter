@@ -6,13 +6,13 @@
 
 $black: 000;
 $color1: #A2D2FF;
-$color2: #FEF9EF;
+$backgroundColor: #FEF9EF;
 $color3: #FF865E;
 $color4: #FEE440;
 $color5: #F7E2E2;
 $color6: #61A4BC;
 $color7: #5B7DB1;
-$color8: #1A132F;
+$font: #1A132F;
 
 
 //=============================================  FONTS  =============================================//
@@ -21,8 +21,8 @@ $color8: #1A132F;
 //=============================================  HTML  =============================================//
 
 ::selection {
-    background-color: red;
-    color: blue;
+    background-color: $font;
+    color: $backgroundColor;
 }
 
 html {
@@ -33,6 +33,7 @@ body {
     display: grid;
     height: max-content;
     grid-template-rows: min-content auto min-content;
+    background-color: $backgroundColor;
 }
 
 //=============================================  HEADER  =============================================//
@@ -42,6 +43,14 @@ header {
     top: 0%;
     grid-row: 1/2;
     z-index: 100;
+    background-color: $color3;
+
+    .navbar {
+        a {
+            color: $font;
+            font-weight: 500;
+        }
+    }
 }
 
 //=============================================  INDEX  =============================================//
@@ -143,7 +152,6 @@ main {
             .brands {
                 height: min-content;
                 width: 100%;
-                background-color: yellowgreen;
 
                 .contenedordemarcas {
                     display: flex;
@@ -220,7 +228,6 @@ main {
 
     section {
         p {
-            // width: 80%;
             padding: 0 10% 0 10%;
         }
     }
@@ -243,7 +250,6 @@ main {
         .contentTop {
             width: 100%;
             height: min-content;
-            background-color: green;
             display: flex;
 
             .infoLeft {
@@ -253,7 +259,6 @@ main {
             }
 
             .infoRight {
-                background-color: yellow;
                 height: 100%;
                 width: 100%;
 
@@ -270,7 +275,6 @@ main {
             align-items: center;
             width: 100%;
             height: min-content;
-            background-color: rebeccapurple;
             gap: 20px;
 
             .studies {
@@ -316,7 +320,6 @@ main {
         .roadMap {
             height: min-content;
             width: 100%;
-            background-color: wheat;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -345,7 +348,6 @@ main {
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            background-color: red;
             padding: 20px;
             gap: 20px;
         }
@@ -367,7 +369,6 @@ main {
         padding: 20px;
         margin-top: 20px;
         height: min-content;
-        background-color: wheat;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -396,7 +397,7 @@ main {
         width: 100%;
         height: 300px;
         grid-column: 2/3;
-        background-color: rebeccapurple;
+        background-color: $color3;
         margin-top: 20px;
 
         .commentary {
@@ -425,7 +426,7 @@ footer {
     height: min-content;
     grid-template-rows: auto 20px;
     grid-template-columns: 10% auto 10%;
-    background-color: green;
+    background-color: $color3;
 
     .footerContent {
         grid-row: 1/2;
@@ -447,7 +448,7 @@ footer {
         display: flex;
         justify-content: center;
         align-items: center;
-        background-color: green;
+        background-color: $color3;
     }
 
     .footerItem {
