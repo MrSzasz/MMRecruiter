@@ -49,23 +49,27 @@ html {
 }
 
 body {
-    background-color: $color5;
     height: max-content;
     font-family: 'Varela Round', sans-serif;
     letter-spacing: 3px;
     word-spacing: 2px;
     line-height: 27px;
     font-weight: 500;
+
+    display: grid;
+    grid-template-rows: min-content auto min-content;
 }
 
 //=============================================  HEADER  =============================================//
 
 header {
-    position: absolute;
+    grid-row: 1/2;
     width: 100%;
-    top: 0%;
 
     .navbar {
+        width: 100%;
+        top: 0%;
+        position: absolute;
         background-color: transparent !important;
 
         .active {
@@ -95,7 +99,6 @@ header {
             background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28245, 245, 245, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
         }
     }
-
 }
 
 
@@ -115,15 +118,14 @@ header {
             background-color: transparent;
         }
     }
-
 }
 
 //=============================================  INDEX  =============================================//
 
 main {
-    display: grid;
     grid-row: 2/3;
-    grid-template-columns: 10% 80% 10%;
+    // display: grid;
+    // grid-template-columns: 10% 80% 10%;
 
     .mainImg {
         display: flex;
@@ -145,81 +147,73 @@ main {
             text-shadow: 3px 3px 5px #4f4f4f;
         }
     }
-    
+
     .mainContent {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 50px;
-        grid-column: 1/4;
-        
+        width: 100%;
+        height: min-content;
+
         .firstSectionMain {
             width: 100%;
-            display: grid;
-            padding: 50px 0 50px 0;
-            grid-template-columns: 10% 80% 10%;
-
-            // background: linear-gradient(40deg, #155263 9%, #155263 43%, #FF6F3C calc(43% + 1px), #FF6F3C 52%, #FF9A3C calc(52% + 1px), #FF9A3C 80%, #FFC93C calc(80% + 1px), #FFC93C 100%);
-
-            // background: linear-gradient(40deg, #155263 9%, #155263 43%, #FF6F3C calc(43% + 1px), #FF6F3C 52%, #FF9A3C calc(52% + 1px), #FF9A3C 80%, #FFC93C calc(80% + 1px), #FFC93C 100%);
-
-            // background-image: url(../resources/index/half.jpg);
-            
-            background: rgb(214,45,38);
-            background: linear-gradient(180deg, rgba(214,45,38,1) 0%, rgba(214,45,38,1) 40%, rgba(255,254,0,1) 100%);
-
-            
-            // background-position: center;
-            // background-repeat: no-repeat;
-            // background-size: cover;
+            height: min-content;
+            display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            gap: 50px;
-            
+
+            .firstSectionMainTop {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 50px;
+                background-color: #117ED6;
+                width: 100%;
+                padding: 50px 10% 50px 10%;
+            }
+
+            .firstSectionMainBottom {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 50px;
+                background-color: #d61111;
+                width: 100%;
+                padding: 50px 10% 50px 10%;
+            }
+
+
             h2 {
-                grid-column: 2/3;
                 text-shadow: 3px 3px 5px #4f4f4f;
                 color: black;
             }
 
             .imgAndText {
-                grid-column: 2/3;
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 flex-direction: column;
                 gap: 20px;
-
-                section {
-                    display: flex;
-                    gap: 20px;
-                    background: rgba(255, 255, 255, 0.2);
-                    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
-                    backdrop-filter: blur(12px);
-                    -webkit-backdrop-filter: blur(12px);
-                    border-radius: 10px;
-                    border: 1px solid rgba(255, 255, 255, 0.18);
-                    padding: 20px;
-
-                    .imgText {
-                        height: 400px;
-                        min-width: 300px;
-                        background-color: black;
-                    }
-
-                    p {
-                        width: auto;
-                        text-align: justify;
-                    }
-
-                    .right {
-                        display: flex;
-                        gap: 20px;
-                    }
-                }
             }
+        }
+    }
+
+    .secondSectionMain {
+        height: min-content;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .secondSectionMainContent {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 50px;
+            background-color: #38d611;
+            width: 100%;
+            padding: 50px 10% 50px 10%;
 
             .cardContainer {
                 display: flex;
@@ -258,6 +252,25 @@ main {
                     }
                 }
             }
+        }
+    }
+
+    .thirdSectionMain {
+        height: min-content;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .thirdSectionMainContent {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 50px;
+            background-color: #d3d611;
+            width: 100%;
+            padding: 50px 10% 50px 10%;
 
             .brands {
                 height: min-content;
@@ -277,9 +290,6 @@ main {
                 }
             }
         }
-
-
-
     }
 }
 
@@ -360,44 +370,55 @@ main {
 .mainContent {
     height: min-content;
 
-    .contentTop {
-        width: 100%;
-        height: min-content;
-        background-color: $red;
+    .mainSectionAboutUs {
         display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+        background-color: #d3d611;
+        width: 100%;
+        padding: 50px 10% 50px 10%;
 
-        .infoLeft {
-            min-height: 250px;
-            min-width: 200px;
-            background-color: black;
-        }
-
-        .infoRight {
-            height: 100%;
+        .contentTop {
             width: 100%;
-            color: $black;
-            line-height: 35px;
+            height: min-content;
+            background-color: $red;
+            display: flex;
 
-            p {
-                text-align: justify;
-                padding: 0 30px 0 30px;
+            .infoLeft {
+                min-height: 250px;
+                min-width: 200px;
+                background-color: black;
+            }
+
+            .infoRight {
+                height: 100%;
+                width: 100%;
+                color: $black;
+                line-height: 35px;
+
+                p {
+                    text-align: justify;
+                    padding: 0 30px 0 30px;
+                }
             }
         }
-    }
 
-    .contentBottom {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        width: 100%;
-        height: min-content;
-        background-color: $red;
-        gap: 20px;
+        .contentBottom {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            width: 100%;
+            height: min-content;
+            background-color: $red;
+            gap: 20px;
 
-        .studies {
-            height: 100px;
-            min-width: 100px;
-            background-color: black;
+            .studies {
+                height: 100px;
+                min-width: 100px;
+                background-color: black;
+            }
         }
     }
 }
@@ -424,95 +445,156 @@ main {
 //=============================================  SERVICES  =============================================//
 
 .mainContent {
-    .roadMap {
+    height: min-content;
+
+    .mainSectionServices {
         height: min-content;
-        width: 100%;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        gap: 70px;
-        padding: 20px;
-        text-align: center;
+        gap: 50px;
+        background-color: #d3d611;
+        width: 100%;
+        // padding: 50px 10% 50px 10%;
+        padding-top: 50px;
 
-        .step {
-            background-color: $orange;
+        .roadMap {
             height: min-content;
-            width: 80%;
-            border-radius: 30px;
-            padding: 30px;
-            line-height: 35px;
-        }
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 70px;
+            padding: 20px;
+            text-align: center;
 
-        .arrowStep {
+            .step {
+                background-color: $orange;
+                height: min-content;
+                width: 80%;
+                border-radius: 30px;
+                padding: 30px;
+                line-height: 35px;
+            }
 
-            i {
-                font-size: 70px;
-                color: $red;
+            .arrowStep {
+
+                i {
+                    font-size: 70px;
+                    color: $red;
+                }
             }
         }
-    }
 
-    .contact {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding: 20px;
-        gap: 20px;
+        .contact {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            gap: 20px;
+        }
+
+        .brands {
+            height: min-content;
+            width: 100%;
+            padding: 0 10% 50px 10%;
+
+
+            .contenedordemarcas {
+                display: flex;
+                align-items: center;
+                gap: 15px;
+            }
+
+            .prueba {
+                height: 200px;
+                width: 30%;
+                margin: auto;
+                background-color: $red;
+            }
+        }
     }
 }
 
 
 //=============================================  CONTACT  =============================================//
 
-form {
-    width: 100%;
-    padding: 20px;
+.mainContent {
     height: min-content;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 25px;
 
-    .form-group {
-        width: 60%;
-    }
-
-    .form-control {
-        letter-spacing: 2px;
-    }
-
-    span {
-        font-style: italic;
-        font-size: 15px;
-    }
-
-    input {
-        width: 100%;
-    }
-}
-
-.peopleWhoTrust {
-    width: 100%;
-    height: min-content;
-    grid-column: 2/3;
-    background-color: $red;
-    margin-top: 20px;
-    color: $white;
-
-    .commentary {
-        height: min-content;
+    .firstSectionMainContact {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        row-gap: 10px;
-        padding: 10px;
+        gap: 50px;
+        background-color: #11d6a5;
+        width: 100%;
+        padding: 50px 10% 50px 10%;
 
-        p {
-            font-style: italic;
+        form {
+            width: 100%;
+            padding: 20px;
+            height: min-content;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 25px;
+
+            .form-group {
+                width: 60%;
+            }
+
+            .form-control {
+                letter-spacing: 2px;
+            }
+
+            span {
+                font-style: italic;
+                font-size: 15px;
+            }
+
+            input {
+                width: 100%;
+            }
+        }
+    }
+
+    .secondSectionMainContact {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+        background-color: #6d11d6;
+        width: 100%;
+        padding: 50px 10% 50px 10%;
+
+        .peopleWhoTrust {
+            width: 100%;
+            height: min-content;
+            grid-column: 2/3;
+            background-color: $red;
+            margin-top: 20px;
+            color: $white;
+
+            .commentary {
+                height: min-content;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                row-gap: 10px;
+                padding: 10px;
+
+                p {
+                    font-style: italic;
+                }
+            }
         }
     }
 }
@@ -528,16 +610,14 @@ form {
 //=============================================  FOOTER  =============================================//
 
 footer {
+    grid-row: 3/4;
     display: grid;
-    height: min-content;
-    grid-template-rows: auto 20px;
     grid-template-columns: 10% auto 10%;
     background-color: $red;
     color: $white;
     padding: 5px;
 
     .footerContent {
-        grid-row: 1/2;
         grid-column: 2/3;
         display: flex;
         justify-content: center;
@@ -551,7 +631,6 @@ footer {
     }
 
     .footerDev {
-        grid-row: 2/3;
         grid-column: 1/4;
         display: flex;
         justify-content: center;
@@ -569,7 +648,7 @@ footer {
         position: fixed;
         bottom: 37px;
         left: 37px;
-        background-color: #25d366;
+        background-color: #25ce41;
         width: 60px;
         height: 60px;
         border: 2px solid black;
@@ -589,6 +668,7 @@ footer {
 
         &:hover {
             transform: scale(1.1);
+            background-color: #00e025;
         }
     }
 }
@@ -659,6 +739,7 @@ footer {
     position: relative;
     height: 2.8em;
     padding-right: 3.3em;
+    margin: auto;
 }
 
 .cssbuttons-io-button .icon {
@@ -692,4 +773,33 @@ footer {
 
 .cssbuttons-io-button:active .icon {
     transform: scale(0.95);
+}
+
+
+section {
+    display: flex;
+    gap: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    padding: 20px;
+
+    .imgText {
+        height: 400px;
+        min-width: 270px;
+        background-color: black;
+    }
+
+    p {
+        width: auto;
+        text-align: justify;
+    }
+
+    .right {
+        display: flex;
+        gap: 20px;
+    }
 }
