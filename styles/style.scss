@@ -73,13 +73,23 @@ header {
         background-color: transparent !important;
 
         .active {
-            background-color: $red;
             border-radius: 30px;
             padding: 5px 20px !important;
+            background: rgba(214, 45, 38, 0.6);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(214, 45, 38, 0.18);
         }
 
         a {
             color: $white !important;
+            background: rgba(255, 255, 255, 0.2);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.18);
         }
 
         .nav-link {
@@ -89,9 +99,13 @@ header {
             transition: .3s ease all;
 
             &:hover {
-                background-color: $red;
                 border-radius: 30px;
                 padding: 5px 20px !important;
+                background: rgba(214, 45, 38, 0.6);
+                box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+                backdrop-filter: blur(12px);
+                -webkit-backdrop-filter: blur(12px);
+                border: 1px solid rgba(214, 45, 38, 0.18);
             }
         }
 
@@ -136,7 +150,7 @@ main {
         height: 500px;
         width: 100%;
         grid-column: 1/4;
-        background-image: url(https://i.pinimg.com/originals/8c/6c/af/8c6caf1c029b9081fe31675c9e2833d6.jpg);
+        background-image: url(../resources/index/manonmural2.jpg);
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -144,7 +158,9 @@ main {
 
         .jumboText {
             color: $white;
-            text-shadow: 3px 3px 5px #4f4f4f;
+            text-shadow: 3px 3px 5px #000;
+            font-weight: bold;
+
         }
     }
 
@@ -166,9 +182,13 @@ main {
                 justify-content: center;
                 align-items: center;
                 gap: 50px;
-                background-color: #117ED6;
+                background-image: url(../resources/index/orangelap.png);
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: 100%;
                 width: 100%;
                 padding: 50px 10% 50px 10%;
+                border-top: 10px solid $red;
             }
 
             .firstSectionMainBottom {
@@ -177,7 +197,10 @@ main {
                 justify-content: center;
                 align-items: center;
                 gap: 50px;
-                background-color: #d61111;
+                background-image: url(../resources/index/bettertalk2yello.jpg);
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
                 width: 100%;
                 padding: 50px 10% 50px 10%;
             }
@@ -211,9 +234,14 @@ main {
             justify-content: center;
             align-items: center;
             gap: 50px;
-            background-color: #38d611;
+            background-image: url(../resources/index/mountainalmostnight.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: top;
             width: 100%;
             padding: 50px 10% 50px 10%;
+            border-top: 10px solid $red;
+
 
             .cardContainer {
                 display: flex;
@@ -268,9 +296,11 @@ main {
             justify-content: center;
             align-items: center;
             gap: 50px;
-            background-color: #d3d611;
+            background-color: wheat;
             width: 100%;
             padding: 50px 10% 50px 10%;
+            border-top: 10px solid $red;
+
 
             .brands {
                 height: min-content;
@@ -376,15 +406,21 @@ main {
         justify-content: center;
         align-items: center;
         gap: 50px;
-        background-color: #d3d611;
+        background-color: wheat;
         width: 100%;
         padding: 50px 10% 50px 10%;
+        border-top: 10px solid $red;
 
         .contentTop {
             width: 100%;
             height: min-content;
-            background-color: $red;
             display: flex;
+            background: rgba(255, 255, 255, 0.2);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.18);
 
             .infoLeft {
                 min-height: 250px;
@@ -454,10 +490,11 @@ main {
         justify-content: center;
         align-items: center;
         gap: 50px;
-        background-color: #d3d611;
+        background-color: wheat;
         width: 100%;
         // padding: 50px 10% 50px 10%;
         padding-top: 50px;
+        border-top: 10px solid $red;
 
         .roadMap {
             height: min-content;
@@ -471,12 +508,16 @@ main {
             text-align: center;
 
             .step {
-                background-color: $orange;
                 height: min-content;
                 width: 80%;
                 border-radius: 30px;
                 padding: 30px;
                 line-height: 35px;
+                background: rgba(214, 45, 38, 0.6);
+                box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+                backdrop-filter: blur(12px);
+                -webkit-backdrop-filter: blur(12px);
+                border: 1px solid rgba(214, 45, 38, 0.18);
             }
 
             .arrowStep {
@@ -531,9 +572,10 @@ main {
         justify-content: center;
         align-items: center;
         gap: 50px;
-        background-color: #11d6a5;
+        background-color: wheat;
         width: 100%;
         padding: 50px 10% 50px 10%;
+        border-top: 10px solid $red;
 
         form {
             width: 100%;
@@ -544,6 +586,12 @@ main {
             justify-content: center;
             align-items: center;
             gap: 25px;
+            border-radius: 10px;
+            background: rgba(255, 254, 0, 0.6);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 254, 0, 0.18);
 
             .form-group {
                 width: 60%;
@@ -570,17 +618,26 @@ main {
         justify-content: center;
         align-items: center;
         gap: 50px;
-        background-color: #6d11d6;
         width: 100%;
+        background-image: url(../resources/index/groupbicolor.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: top;
         padding: 50px 10% 50px 10%;
+        border-top: 10px solid $red;
 
         .peopleWhoTrust {
             width: 100%;
             height: min-content;
             grid-column: 2/3;
-            background-color: $red;
             margin-top: 20px;
-            color: $white;
+            color: $font;
+            background: rgba(255, 255, 255, 0.2);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.18);
 
             .commentary {
                 height: min-content;
@@ -613,7 +670,7 @@ footer {
     grid-row: 3/4;
     display: grid;
     grid-template-columns: 10% auto 10%;
-    background-color: $red;
+    background-color: $font;
     color: $white;
     padding: 5px;
 
@@ -635,7 +692,7 @@ footer {
         display: flex;
         justify-content: center;
         align-items: center;
-        background-color: $red;
+        background-color: $font;
     }
 
     .footerItem {
