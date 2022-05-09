@@ -15,9 +15,8 @@
 
 let detector = new MobileDetect(window.navigator.userAgent);
 if (detector.phone() == null || detector.userAgent() == "Safari") {
-    console.log( "Mobile: " + detector.mobile());
-    console.log( "Phone: " + detector.phone());
-    console.log( "Tablet: " + detector.tablet());
-    console.log( "OS: " + detector.os());
-    console.log( "userAgent: " + detector.userAgent());
+    alert(` Mobile: ${detector.mobile()}; 
+     Phone: ${detector.phone()};
+     OS: ${detector.os()};
+     userAgent: ${detector.userAgent()});
 }
