@@ -16,6 +16,8 @@
         "autem",
         "beatae",
         "blanditiis",
+        "cdefs",
+        "cmask",
         "commodi",
         "Commodi",
         "consectetur",
@@ -27,6 +29,7 @@
         "corrupti",
         "Corrupti",
         "cpath",
+        "crect",
         "cssbuttons",
         "csvg",
         "cumque",
@@ -123,6 +126,8 @@
         "sunt",
         "Sunt",
         "suscipit",
+        "svgjs",
+        "Svgjs",
         "tempora",
         "temporibus",
         "tenetur",
@@ -138,6 +143,7 @@
         "voluptatem",
         "voluptatibus",
         "voluptatum",
-        "webhost"
+        "webhost",
+        "xlink"
     ]
 }
