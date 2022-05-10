@@ -13,11 +13,11 @@
 //     }
 // }
 
-let detector = new MobileDetect(window.navigator.userAgent);
+// let detector = new MobileDetect(window.navigator.userAgent);
 
-if (detector.phone() == null || detector.userAgent() == "Safari") {
-    alert(`Mobile: ${detector.mobile()}
-     Phone: ${detector.phone()}
-     OS: ${detector.os()}
-     userAgent: ${detector.userAgent()}`)
-}
+// if (detector.phone() == null || detector.userAgent() == "Safari") {
+//     alert(`Mobile: ${detector.mobile()}
+//      Phone: ${detector.phone()}
+//      OS: ${detector.os()}
+//      userAgent: ${detector.userAgent()}`)
+// }
