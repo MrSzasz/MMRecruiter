@@ -15,9 +15,15 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./styles/normalize/normalize.css">
     <link rel="stylesheet" href="./styles/style.css">
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mobile-detect/1.4.5/mobile-detect.min.js"></script>
+    <script src="./scrips/browserChanges.js"></script>
+    
 </head>
 
 <body>
@@ -25,18 +31,28 @@
     <!-- ========================================  HEADER  ======================================== -->
 
     <header>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-2">
-            <a class="navbar-brand" href="#">MMRecruiter</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
-                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
-                <div class="navbar-nav">
-                    <a class="nav-item nav-link active" href="#">INICIO</a>
-                    <a class="nav-item nav-link" href="./pages/aboutUs.html">NOSOTROS</a>
-                    <a class="nav-item nav-link" href="./pages/services.html">SERVICIOS</a>
-                    <a class="nav-item nav-link" href="./pages/contact.html">CONTACTO</a>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light p-3 w-100">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">MMRECRUITER</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse flex-row-reverse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">INICIO</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./pages/aboutUs.html">NOSOTROS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./pages/services.html">SERVICIOS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./pages/contact.html">CONTACTO</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </nav>
@@ -46,82 +62,75 @@
 
     <main class="text-center">
         <div class="jumbotron mainImg text-center">
-            <h1>MMRECRUITER</h1>
-            <p>BIENVENIDOS</p>
+            <h1 class="jumboText">MMRECRUITER</h1>
+            <p class="jumboText">BIENVENIDOS</p>
         </div>
         <div class="mainContent">
-            <h2>------------------------- Quienes somos -------------------------</h2>
-            <div class="imgAndText">
-                <section data-aos="fade-right">
-                    <div class="imgText imgLeft"></div>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ducimus modi, tempore quis, iste
-                        deserunt
-                        exercitationem numquam enim dolore pariatur vitae minus facilis aliquam rem perspiciatis qui
-                        optio
-                        dolores
-                        maiores impedit saepe! Nemo blanditiis quibusdam iste accusamus cum omnis, perferendis magnam,
-                        dolores
-                        aliquam facilis cumque saepe? Fuga, quo dolorem. Commodi, vero? Expedita pariatur iure quod
-                        beatae
-                        sunt,
-                        reprehenderit illum, officia excepturi est minima rem a. Corporis et fugit ex dolor quisquam
-                        quaerat
-                        quos
-                        maxime. Ipsam hic quidem placeat tempora totam sequi sed sit modi, quos distinctio autem libero
-                        repudiandae
-                        impedit nemo eaque, aliquam minus dignissimos non, debitis magnam minima? Dicta laborum quo
-                        perferendis,
-                        nemo suscipit molestias neque facilis ipsam facere maiores quas incidunt pariatur autem
-                        similique
-                        officiis
-                        ex ut impedit optio veniam quasi praesentium numquam deserunt magni iusto? Sunt tempore commodi
-                        qui
-                        rem
-                        eos,
-                        quia nobis incidunt iure ab explicabo, provident cumque odit alias fugiat sit dolorum molestias
-                        esse
-                        sapiente officia. Consectetur dicta exercitationem rerum recusandae voluptate repellat
-                        doloremque,
-                        non
-                        esse
-                        placeat incidunt, ad ipsum ipsa tempora iste, provident maiores autem nulla ab? Veritatis libero
-                        eveniet
-                        necessitatibus aspernatur natus minus maxime recusandae sequi similique. Aut doloremque
-                        repudiandae
-                        ipsa
-                        sapiente et, ducimus id omnis non cupiditate reprehenderit nam reiciendis blanditiis hic soluta?
-                    </p>
-                </section>
-                <section data-aos="fade-left">
-                    <div class="right">
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Possimus pariatur quisquam eum
-                            temporibus
-                            laborum.
-                            Natus iusto corporis fugit eum nesciunt officiis consequatur cumque culpa assumenda magni
-                            quia
-                            molestias,
-                            unde neque ut inventore impedit optio nostrum mollitia delectus obcaecati doloremque
-                            deserunt.
-                            Vel
-                            labore,
-                            ut porro sequi aspernatur veniam fugiat dignissimos nostrum similique vero, asperiores esse,
-                            doloribus
-                            corporis libero sint magnam sapiente dicta omnis minima rerum tenetur distinctio praesentium
-                            excepturi
-                            non!
-                            Commodi minima adipisci quaerat unde, cupiditate sit voluptatum dolor officia ducimus id
-                            facilis
-                            nulla
-                            quod,
-                            tempore alias autem veniam ex at blanditiis asperiores! Modi voluptate culpa, quod suscipit
-                            fuga
-                            deserunt
-                            nulla?</p>
-                        <div class="imgText imgRight"></div>
+            <div class="firstSectionMain">
+                <div class="firstSectionMainTop">
+                    <h2 class="divider">¿QUIENES SOMOS?</h2>
+                    <div class="imgAndText">
+                        <section data-aos="fade-up" data-aos-duration="400">
+                            <div class="imgText imgLeft"></div>
+                            <p>Por vocación y formación, somos especialistas en personas. Nuestra pasión son las personas.
+
+                                Y defendemos el éxito de las organizaciones cuya prioridad es el Talento.
+                                Nuestro objetivo es prestar un servicio único y de calidad que ayude a las empresas a mejorar sus resultados de negocio a través de la gestión del talento. Nuestra pasión son las personas y, con ellas, convertimos sus retos de hoy en éxitos de mañana.
+                            </p>
+                        </section>
                     </div>
-                </section>
-                <button class="cssbuttons-io-button"> NOSOTROS
-                    <a href="./pages/aboutUs.html" class="icon">
+                </div>
+                <div class="firstSectionMainBottom">
+                    <section data-aos="fade-up" data-aos-duration="400">
+                        <div class="right">
+                           <p>
+                            Compuesto por un gran grupo de profesionales altamente capacitados y con amplios conocimientos y experiencia en el mundo de la consultoría, la selección de talento y la evaluación, su trabajo destaca por su gran calidad y acierto en todos los proyectos que lleva a cabo.
+
+                            Estamos orgullosos de todas las personas que forman parte de MMRecruiter. Gracias a ellos, que día a día demuestran su talento y pasión por los recursos humanos, podemos seguir creciendo y afrontando con entusiasmo los nuevos retos que se presentan.
+                           </p>
+                            <div class="imgTexto imgRight"></div>
+                        </div>
+                    </section>
+                    <button class="cssbuttons-io-button"> NOSOTROS
+                        <a href="./pages/aboutUs.html" class="icon">
+                            <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0 0h24v24H0z" fill="none"></path>
+                                <path
+                                    d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"
+                                    fill="currentColor"></path>
+                            </svg>
+                        </a>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="secondSectionMain">
+            <div class="secondSectionMainContent">
+                <h2 class="divider">¿POR QUE ELEGIRNOS?</h2>
+                <div class="cardContainer">
+                    <div class="card">
+                        <div class="card-body"> 
+                            <h5 class="card-title">Pioneros</h5>
+                            <p class="card-text">Primera consultora de Recursos Humanos de habla hispana, en certificarse en la norma ISO 10667</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Resultados</h5>
+                            <p class="card-text">Ayuda a otras organizaciones a conseguir que los procesos de RRHH resulten precisos, medibles y objetivos</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Eficiencia</h5>
+                            <p class="card-text">Posibilita la obtención de indicadores de eficiencia e implementación de oportunidades de mejora</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="cssbuttons-io-button"> CONTACTANOS
+                    <a href="./pages/contact.html" class="icon">
                         <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                             <path d="M0 0h24v24H0z" fill="none"></path>
                             <path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"
@@ -130,76 +139,47 @@
                     </a>
                 </button>
             </div>
-            <h2>------------------------- Porque elegirnos -------------------------</h2>
-            <div class="cardContainer">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                            of
-                            the card's content.</p>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                            of
-                            the card's content.</p>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                            of
-                            the card's content.</p>
-                    </div>
-                </div>
-            </div>
-            <button class="cssbuttons-io-button"> CONTACTANOS
-                <a href="./pages/contact.html" class="icon">
-                    <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M0 0h24v24H0z" fill="none"></path>
-                        <path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"
-                            fill="currentColor"></path>
-                    </svg>
-                </a>
-            </button>
-            <h2>--------------------- Marcas que confían en nosotros ---------------------</h2>
-            <div class="brands">
-                <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <div class="contenedordemarcas">
-                                <div class="prueba"></div>
-                                <div class="prueba"></div>
-                                <div class="prueba"></div>
-                                <div class="prueba"></div>
-                                <div class="prueba"></div>
+        </div>
+
+
+        <div class="thirdSectionMain">
+            <div class="thirdSectionMainContent">
+                <h2 class="divider">MARCAS QUE CONFÍAN EN NOSOTROS</h2>
+                <div class="brands">
+                    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="contenedordemarcas">
+                                    <div class="prueba"></div>
+                                    <div class="prueba"><img src="resources/index/sonomotors-favicon.256x0.png" alt="logo1"></div>
+                                    <div class="prueba"><img src="resources/index/992801ae3182fa95353e941cfcac9293-diseno-de-escudo-logo-emblema.png" alt="logo1"></div>
+                                    <div class="prueba"><img src="resources/index/Logo_LogoExample_Header_4_ES.webp" alt="logo1"></div>
+                                    <div class="prueba"></div>
+                                </div>
                             </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div class="contenedordemarcas">
-                                <div class="prueba"></div>
-                                <div class="prueba"></div>
-                                <div class="prueba"></div>
-                                <div class="prueba"></div>
-                                <div class="prueba"></div>
+                            <div class="carousel-item">
+                                <div class="contenedordemarcas">
+                                    <div class="prueba"></div>
+                                    <div class="prueba"><img src="resources/index/lenditlogo.webp" alt="logo1"></div>
+                                    <div class="prueba"><img src="resources/index/SketchUp-Logo.png" alt="logo1"></div>
+                                    <div class="prueba"><img src="resources/index/33702-facebook-logo-icon-vector-icon-vector-eps.png" alt=""></div>
+                                    <div class="prueba"></div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
+                <button class="cssbuttons-io-button"> SERVICIOS
+                    <a href="./pages/services.html" class="icon">
+                        <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 0h24v24H0z" fill="none"></path>
+                            <path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"
+                                fill="currentColor"></path>
+                        </svg>
+                    </a>
+                </button>
             </div>
-            <button class="cssbuttons-io-button"> SERVICIOS
-                <a href="./pages/services.html" class="icon">
-                    <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M0 0h24v24H0z" fill="none"></path>
-                        <path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"
-                            fill="currentColor"></path>
-                    </svg>
-                </a>
-            </button>
+        </div>
     </main>
 
     <!-- ========================================  FOOTER  ======================================== -->
@@ -228,6 +208,9 @@
         <div class="footerDev">
             hola somos los devs!
         </div>
+        <a href="#" class="wsp">
+            <i class="fa-brands fa-whatsapp"></i>
+        </a>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"

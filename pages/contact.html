@@ -15,8 +15,14 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="../styles/normalize/normalize.css">
     <link rel="stylesheet" href="../styles/style.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mobile-detect/1.4.5/mobile-detect.min.js"></script>
+    <script src="../scrips/browserChanges.js"></script>
 
 </head>
 
@@ -25,18 +31,28 @@
     <!-- ========================================  HEADER  ======================================== -->
 
     <header>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-2">
-            <a class="navbar-brand" href="../index.html">MMRecruiter</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
-                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
-                <div class="navbar-nav">
-                    <a class="nav-item nav-link" href="../index.html">INICIO</a>
-                    <a class="nav-item nav-link" href="./aboutUs.html">NOSOTROS</a>
-                    <a class="nav-item nav-link" href="./services.html">SERVICIOS</a>
-                    <a class="nav-item nav-link active" href="#">CONTACTO</a>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light p-3">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="../index.html">MMRECRUITER</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse flex-row-reverse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html">INICIO</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./aboutUs.html">NOSOTROS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./services.html">SERVICIOS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">CONTACTO</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </nav>
@@ -46,113 +62,115 @@
 
     <main>
         <div class="jumbotron mainImg text-center">
-            <h1>CONTACTANOS</h1>
+            <h1 class="jumboText">CONTACTANOS</h1>
         </div>
         <div class="mainContent">
-            <form>
-                <div class="form-group text-center">
-                    <label for="name">
-                        <h5>NOMBRE COMPLETO*</h5>
-                    </label>
-                    <input type="text" class="form-control text-center" id="name" placeholder="Inserte su nombre"
-                        required>
-                </div>
-                <div class="form-group text-center">
-                    <label for="mail">
-                        <h5>EMAIL*</h5>
-                    </label>
-                    <input type="email" class="form-control text-center" id="mail" placeholder="nombre@ejemplo.com"
-                        required>
-                </div>
-                <div class="form-group text-center">
-                    <label for="brand">
-                        <h5>EMPRESA</h5>
-                    </label>
-                    <input type="text" class="form-control text-center" id="brand"
-                        placeholder="Inserte el nombre de la empresa">
-                </div>
-                <div class="form-group text-center">
-                    <label for="subject">
-                        <h5>ASUNTO*</h5>
-                    </label>
-                    <input type="text" class="form-control text-center w-100" id="subject" placeholder="Inserte el asunto"
-                        required>
-                </div>
-                <div class="form-group text-center">
-                    <label for="text">
-                        <h5>MENSAJE*</h5>
-                    </label>
-                    <textarea class="form-control" id="text" rows="5" placeholder="Escriba aquí..." required></textarea>
-                </div>
-                <button type="submit" class="cssbuttons-io-button"> ENVIAR
-                    <div class="icon">
-                        <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M0 0h24v24H0z" fill="none"></path>
-                            <path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"
-                                fill="currentColor"></path>
-                        </svg>
+            <div class="firstSectionMainContact">
+                <form>
+                    <div class="form-group text-center">
+                        <label for="name">
+                            <h5>NOMBRE COMPLETO*</h5>
+                        </label>
+                        <input type="text" class="form-control text-center" id="name" placeholder="Inserte su nombre"
+                            required>
                     </div>
-                </button>
-                <span>*obligatorio</span>
-            </form>
-            <h2 class="text-center">QUE DICEN NUESTROS CLIENTES</h2>
-            <div class="peopleWhoTrust">
-                <div id="carouselExampleIndicators" class="carousel slide h-100 w-100" data-bs-ride="carousel">
-                    <div class="carousel-indicators">
-                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
-                            class="active" aria-current="true" aria-label="Slide 1"></button>
-                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-                            aria-label="Slide 2"></button>
-                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-                            aria-label="Slide 3"></button>
+                    <div class="form-group text-center">
+                        <label for="mail">
+                            <h5>EMAIL*</h5>
+                        </label>
+                        <input type="email" class="form-control text-center" id="mail" placeholder="nombre@ejemplo.com"
+                            required>
                     </div>
-                    <div class="carousel-inner p-4">
-                        <div class="carousel-item active">
-                            <div class="commentary">
-                                <!-- <div class="imgCommentary"></div> -->
-                                <img src="https://source.unsplash.com/user/c_v_r/100x100" alt="">
-                                <div class="textCommentary text-center">
-                                    <h2>NOMBRE</h2>
-                                    <p>"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil, dicta."</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div class="commentary">
-                                <!-- <div class="imgCommentary"></div> -->
-                                <img src="https://source.unsplash.com/user/c_v_r/100x100" alt="">
-                                <div class="textCommentary text-center">
-                                    <h2>NOMBRE</h2>
-                                    <p>"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil, dicta."</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div class="commentary">
-                                <!-- <div class="imgCommentary"></div> -->
-                                <img src="https://source.unsplash.com/user/c_v_r/100x100" alt="">
-                                <div class="textCommentary text-center">
-                                    <h2>NOMBRE</h2>
-                                    <p>"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil, dicta."</p>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="form-group text-center">
+                        <label for="brand">
+                            <h5>EMPRESA</h5>
+                        </label>
+                        <input type="text" class="form-control text-center" id="brand"
+                            placeholder="Inserte el nombre de la empresa">
                     </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
-                        data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
+                    <div class="form-group text-center">
+                        <label for="subject">
+                            <h5>ASUNTO*</h5>
+                        </label>
+                        <input type="text" class="form-control text-center w-100" id="subject"
+                            placeholder="Inserte el asunto" required>
+                    </div>
+                    <div class="form-group text-center">
+                        <label for="text">
+                            <h5>MENSAJE*</h5>
+                        </label>
+                        <textarea class="form-control" id="text" rows="5" placeholder="Escriba aquí..." required></textarea>
+                    </div>
+                    <button type="submit" class="cssbuttons-io-button"> ENVIAR
+                        <div class="icon">
+                            <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0 0h24v24H0z" fill="none"></path>
+                                <path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"
+                                    fill="currentColor"></path>
+                            </svg>
+                        </div>
                     </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
-                        data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
+                    <span>*obligatorio</span>
+                </form>
+            </div>
+            <div class="secondSectionMainContact">
+                <h2 class="text-center divider">QUE DICEN NUESTROS CLIENTES</h2>
+                <div class="peopleWhoTrust">
+                    <div id="carouselExampleIndicators" class="carousel slide w-100" data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                                class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                                aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                                aria-label="Slide 3"></button>
+                        </div>
+                        <div class="carousel-inner p-4">
+                            <div class="carousel-item active">
+                                <div class="commentary">
+                                    <!-- <div class="imgCommentary"></div> -->
+                                    <img src="https://source.unsplash.com/user/c_v_r/100x100" alt="">
+                                    <div class="textCommentary text-center">
+                                        <h2>Miguel</h2>
+                                        <p>"Gracias por la oportunidad de pasar por un proceso de selección en un buen clima, siendo claros, y dando mucha confianza!"</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="commentary">
+                                    <!-- <div class="imgCommentary"></div> -->
+                                    <img src="https://source.unsplash.com/user/c_v_r/100x100" alt="">
+                                    <div class="textCommentary text-center">
+                                        <h2>Anderson</h2>
+                                        <p>"Me pareció excelente la experiencia, el trato y el clima en cuanto a las evaluaciones de personal para la búsqueda laboral. Muchas gracias por la oportunidad."</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="commentary">
+                                    <!-- <div class="imgCommentary"></div> -->
+                                    <img src="https://source.unsplash.com/user/c_v_r/100x100" alt="">
+                                    <div class="textCommentary text-center">
+                                        <h2>Maria</h2>
+                                        <p>"Muy buena experiencia! Altamente recomendable. Todo organizado, siguiendo nuevas tendencias. Es complicado encontrar estacionamiento ahí."</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
-
-
     </main>
 
     <!-- ========================================  FOOTER  ======================================== -->
@@ -181,6 +199,9 @@
         <div class="footerDev">
             hola somos los devs!
         </div>
+        <a href="#" class="wsp">
+            <i class="fa-brands fa-whatsapp"></i>
+        </a>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
