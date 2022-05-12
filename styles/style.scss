@@ -649,7 +649,9 @@ footer {
 
     .footerContent {
         grid-column: 2/3;
-        @include flex();
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
     }
 
     .textFooter {
@@ -665,8 +667,6 @@ footer {
     }
 
     .footerItem {
-        display: flex;
-        flex-direction: column;
         gap: 10px;
     }
 
@@ -724,8 +724,7 @@ footer {
 
 @media only screen and (max-width: 767px) {
     .footerItem {
-        justify-content: center;
-        align-items: center;
+        @include flex(column);
         width: 100%;
     }
 
