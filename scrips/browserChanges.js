@@ -25,10 +25,11 @@ OS: ${detector.os()}
 userAgent: ${detector.userAgent()}
 isPhone: ${detector.is('iPhone')}`)
 
+}
+
 div.innerHTML= `
 Mobile: ${detector.mobile()}<br>
 Phone: ${detector.phone()}<br>
 OS: ${detector.os()}<br>
 userAgent: ${detector.userAgent()}<br>
 isPhone: ${detector.is('iPhone')}<br>`;
-}
