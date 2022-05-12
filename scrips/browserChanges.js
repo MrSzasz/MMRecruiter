@@ -14,6 +14,8 @@
 // }
 
 let detector = new MobileDetect(window.navigator.userAgent);
+let div = document.querySelector("#jsget");
+console.log(div);
 
 if (detector.phone() == null || detector.userAgent() == "Safari") {
     alert(`
@@ -22,4 +24,11 @@ Phone: ${detector.phone()}
 OS: ${detector.os()}
 userAgent: ${detector.userAgent()}
 isPhone: ${detector.is('iPhone')}`)
+
+div.innerHTML= `
+Mobile: ${detector.mobile()}<br>
+Phone: ${detector.phone()}<br>
+OS: ${detector.os()}<br>
+userAgent: ${detector.userAgent()}<br>
+isPhone: ${detector.is('iPhone')}<br>`;
 }
