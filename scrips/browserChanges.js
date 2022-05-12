@@ -21,5 +21,5 @@ Mobile: ${detector.mobile()}
 Phone: ${detector.phone()}
 OS: ${detector.os()}
 userAgent: ${detector.userAgent()}
-isPhone: ${detector.isPhone()}`)
+isPhone: ${detector.is('iPhone')}`)
 }
