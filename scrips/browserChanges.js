@@ -14,9 +14,11 @@ let browserName = (function (agent) {
 if (detector.phone() != null) {
 
     if (detector.userAgent() != 'Chrome' && detector.userAgent() != 'Firefox') {
-        $('.mainImg').css('background-attachment:', 'scroll');
+        $('.mainImg').css('background-attachment:', 'scroll', 'background-position:', 'right', 'background-size:', 'contain');
     } else if (detector.userAgent() == 'Firefox') {
         $('.hasJs').toggleClass('blur', true);
+    }else if (detector.is('iPhone')){
+        $('.mainImg').css('background-attachment:', 'scroll', 'background-position:', 'right', 'background-size:', 'contain');
     }
 
 } else if (browserName == 'Mozilla Firefox') {
