@@ -1,7 +1,5 @@
 /*
 
-1 - botones predef redondeados
-
 2 - h2 tamaño fuente
 
 4 - padding servicios
@@ -769,7 +767,7 @@ footer {
     padding-left: 1.2em;
     font-size: 17px;
     font-weight: 500;
-    border-radius: 0.9em;
+    border-radius: 30px;
     border: none;
     letter-spacing: 0.05em;
     display: flex;
@@ -792,7 +790,7 @@ footer {
     justify-content: center;
     height: 2.2em;
     width: 2.2em;
-    border-radius: 0.7em;
+    border-radius: 30px;
     right: 0.3em;
     transition: all 0.3s;
 }
