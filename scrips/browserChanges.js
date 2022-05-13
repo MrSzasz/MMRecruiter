@@ -1,23 +1,22 @@
-// function BrowserDetection() {
-//     //Check if browser is Firefox 
-//      if (navigator.userAgent.search("Firefox") >= 0) {
-//         // insert conditional Firefox Code here
-//     }
-//     //Check if browser is Safari
-//     else if (navigator.userAgent.search("Safari") >= 0 && navigator.userAgent.search("Chrome") < 0) {
-//         // insert conditional Safari code here
-//     }
-//     //Check if browser is Opera
-//     else if (navigator.userAgent.search("Opera") >= 0) {
-//         // insert conditional Opera code here
-//     }
-// }
+let detector = new MobileDetect(window.navigator.userAgent);
 
-// let detector = new MobileDetect(window.navigator.userAgent);
+let browserName = (function (agent) {
+    switch (true) {
+        case agent.indexOf("firefox") > -1:
+            return "Mozilla Firefox";
+        default:
+            return "other";
+    }
+})(window.navigator.userAgent.toLowerCase());
 
-// if (detector.phone() == null || detector.userAgent() == "Safari") {
-//     alert(`Mobile: ${detector.mobile()}
-//      Phone: ${detector.phone()}
-//      OS: ${detector.os()}
-//      userAgent: ${detector.userAgent()}`)
-// }
+if (detector.phone() != null) {
+
+    if (detector.userAgent() != 'Chrome' && detector.userAgent() != 'Firefox') {
+        $('.mainImg').css('background-attachment', 'scroll');
+    } else if (detector.userAgent() == 'Firefox') {
+        $('.hasJs').toggleClass('blur', true);
+    }
+
+} else if (browserName == 'Mozilla Firefox') {
+    $('.hasJs').toggleClass('blur', true);
+}
