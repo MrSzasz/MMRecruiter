@@ -6,8 +6,6 @@
 
 4 - padding servicios
 
-7 - form active y autocompletar colors
-
 8 - h2 text shadows
 
 9 - linktree
@@ -580,49 +578,62 @@ main {
 
             .form-control {
                 letter-spacing: 2px;
-            }
 
-            span {
-                font-style: italic;
-                font-size: 15px;
-            }
+                &:focus-visible {
+                    outline: 3px solid rgba(214, 45, 38, 0.5);
+                }
 
-            input {
-                width: 100%;
+                &:focus {
+                    color: #212529;
+                    background-color: #fff;
+                    border-color: $red;
+                    outline: 0;
+                    box-shadow: 0 0 0 0.25rem rgba(253, 13, 13, 0.25);
+                }
             }
         }
-    }
 
-    .secondSectionMainContact {
-        @include flex(column);
-        gap: 50px;
-        width: 100%;
-        @include bgImg("../resources/index/groupbicolor.jpg", top);
-        padding: 50px 10% 50px 10%;
-        border-top: 10px solid $red;
+        span {
+            font-style: italic;
+            font-size: 15px;
+        }
 
-        .peopleWhoTrust {
+        input {
             width: 100%;
+        }
+    }
+}
+
+.secondSectionMainContact {
+    @include flex(column);
+    gap: 50px;
+    width: 100%;
+    @include bgImg("../resources/index/groupbicolor.jpg", top);
+    padding: 50px 10% 50px 10%;
+    border-top: 10px solid $red;
+
+    .peopleWhoTrust {
+        width: 100%;
+        height: min-content;
+        grid-column: 2/3;
+        margin-top: 20px;
+        color: $font;
+
+        @include glassMorph();
+
+        .commentary {
             height: min-content;
-            grid-column: 2/3;
-            margin-top: 20px;
-            color: $font;
+            @include flex(column);
+            row-gap: 10px;
+            padding: 10px;
 
-            @include glassMorph();
-
-            .commentary {
-                height: min-content;
-                @include flex(column);
-                row-gap: 10px;
-                padding: 10px;
-
-                p {
-                    font-style: italic;
-                }
+            p {
+                font-style: italic;
             }
         }
     }
 }
+
 
 //========================================  MEDIA QUERIES  ========================================//
 
@@ -862,4 +873,19 @@ section {
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
     border-radius: 10px;
     border: 1px solid rgba(214, 45, 38, 0.18);
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+    border: transparent;
+    -webkit-text-fill-color: $font;
+    -webkit-box-shadow: 0 0 0px 1000px wheat inset;
+    transition: background-color 5000s ease-in-out 0s;
 }
