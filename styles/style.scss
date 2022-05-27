@@ -439,6 +439,24 @@ main {
                     font-style: italic;
                     font-size: 18px;
                 }
+
+                .imgSvg {
+                    // background-image: url("https://www.freelancermap.com/assets/svg/data1.svg");
+                    // height: 200px;
+                    // width: 200px;
+                    // background-color: red
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    right: 0;
+                    width: 100%;
+
+                    img {
+                        max-height: 350px;
+                        height: auto;
+                        width: auto;
+                    }
+                }
             }
         }
 
@@ -936,7 +954,18 @@ select:-webkit-autofill:focus {
     transition: background-color 5000s ease-in-out 0s;
 }
 
-.titleShadow{
+.titleShadow {
     text-shadow: 3px 3px 5px #4f4f4f;
     color: black;
+}
+
+.imgFromSvg {
+    max-height: 350px;
+    height: auto;
+    width: auto;
+}
+
+.topServices{
+    grid-column: 2/3;
+    margin: 0 10%;
 }
