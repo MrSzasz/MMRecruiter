@@ -324,6 +324,41 @@ main {
 
 //========================================  MEDIA QUERIES  ========================================//
 
+
+@media only screen and (max-width: 1024px) {
+    section {
+        @include flex(column);
+
+        .imgText {
+            height: 100%;
+            width: 100%;
+        }
+
+        p {
+            width: auto;
+            text-align: justify;
+            line-height: 28px;
+        }
+
+        .right {
+            @include flex(column-reverse);
+        }
+    }
+
+    .cardContainer {
+        width: 90%;
+        flex-wrap: wrap;
+    }
+
+    .contenedordemarcas {
+        flex-wrap: wrap;
+    }
+
+    .prueba {
+        height: 100px !important;
+    }
+}
+
 @media only screen and (max-width: 769px) {
     section {
         @include flex(column);
@@ -386,6 +421,22 @@ main {
         p {
             padding: 0 10% 0 10%;
         }
+    }
+
+    .imgFromSvg {
+        max-height: 350px;
+        max-width: 420px;
+        height: 200px;
+        width: auto;
+    }
+}
+
+@media only screen and (max-width: 321px) {
+    .imgFromSvg {
+        max-height: 350px;
+        max-width: 420px;
+        height: 150px;
+        width: auto;
     }
 }
 
@@ -496,6 +547,23 @@ main {
     .contentBottom {
         flex-wrap: wrap;
     }
+
+    .imgFromSvg {
+        max-height: 350px;
+        max-width: 300px;
+        height: auto;
+        width: 320px;
+    }
+}
+
+@media only screen and (max-width: 321px) {
+
+    .imgFromSvg {
+        max-height: 350px;
+        max-width: 250px;
+        height: auto;
+        width: 320px;
+    }
 }
 
 
@@ -568,6 +636,51 @@ main {
     }
 }
 
+//========================================  MEDIA QUERIES  ========================================//
+
+
+@media only screen and (max-width: 769px) {
+
+    .imgFromSvg {
+        // max-height: 350px;
+        max-width: 400px;
+        height: auto;
+        width: 320px;
+    }
+}
+
+@media only screen and (max-width: 426px) {
+    .step {
+        width: 80% !important;
+    }
+
+    .imgFromSvg {
+        // max-height: 350px;
+        max-width: 320px;
+        height: auto;
+        width: 320px;
+    }
+}
+
+@media only screen and (max-width: 376px) {
+
+    .imgFromSvg {
+        // max-height: 350px;
+        max-width: 280px;
+        height: auto;
+        width: 320px;
+    }
+}
+
+@media only screen and (max-width: 321px) {
+
+    .imgFromSvg {
+        // max-height: 350px;
+        max-width: 180px;
+        height: auto;
+        width: 320px;
+    }
+}
 
 //=============================================  CONTACT  =============================================//
 
@@ -681,9 +794,20 @@ footer {
     }
 
     .textFooter {
+
         // height: min-content;
         // width: min-content;
         // text-align: justify;
+        @include flex(column);
+        gap: 10px;
+        margin: 10px 0;
+
+        img {
+            border-radius: 50%;
+            height: 80px;
+            border: 2px solid $red;
+        }
+
         span {
             font-weight: bold;
             font-style: italic;
@@ -802,16 +926,12 @@ footer {
         .icon {
 
             box-shadow: 0.1em 0.1em 0.6em 0.2em #0A66C2;
+
             svg {
                 color: #0A66C2;
             }
         }
-
-
-
-
     }
-
 }
 
 //========================================  MEDIA QUERIES  ========================================//
@@ -1058,3 +1178,5 @@ select:-webkit-autofill:focus {
         font-style: italic;
     }
 }
+
+//========================================  MEDIA QUERIES  ========================================//
