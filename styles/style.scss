@@ -1,18 +1,10 @@
 /*
 
-2 - h2 tamaño fuente
-
-4 - padding servicios
-
-8 - h2 text shadows
-
 9 - linktree
 
 11 - responsive = cards w/ active text
 
 12 - esp to eng
-
-13 - linkedin about us
 
 14 - emailjs contact
 
@@ -61,8 +53,9 @@ body {
 
 $backgroundColor: #FEF9EF;
 $font: #1A132F;
-// $font: rgb(26, 19, 47);
-$red: #D62D26;
+// $font: rgb(26, 19, 47);  
+// $red: #D62D26;
+$red: #e75d44;
 // $red: rgb(214, 45, 38);
 $yellow: #FFFE00;
 // $yellow: rgb(255, 254, 0);
@@ -233,12 +226,6 @@ main {
                 @include bgImg("../resources/index/orangemeeting.jpg");
                 width: 100%;
                 padding: 50px 10% 50px 10%;
-            }
-
-
-            h2 {
-                text-shadow: 3px 3px 5px #4f4f4f;
-                color: black;
             }
 
             .imgAndText {
@@ -424,6 +411,7 @@ main {
             .infoLeft {
                 min-height: 250px;
                 min-width: 200px;
+                width: 40%;
                 background-color: black;
                 background-image: url(../resources/index/marianela.jpg);
                 background-position: center;
@@ -436,9 +424,20 @@ main {
                 color: #000;
                 line-height: 35px;
 
+                h4 {
+                    font-style: italic;
+                    font-weight: bold;
+                }
+
                 p {
                     text-align: justify;
                     padding: 0 30px 0 30px;
+                }
+
+                span {
+                    font-weight: bold;
+                    font-style: italic;
+                    font-size: 18px;
                 }
             }
         }
@@ -868,12 +867,11 @@ section {
     display: flex;
     gap: 20px;
     @include glassMorph();
-    padding: 20px;
+    padding: 40px;
 
     .imgText {
         height: 400px;
         min-width: 270px;
-
         background-image: url(../resources/index/creacion.svg);
         background-repeat: no-repeat;
         background-size: cover;
@@ -894,6 +892,7 @@ section {
     p {
         width: auto;
         text-align: justify;
+        line-height: 40px;
     }
 
     .right {
@@ -935,4 +934,9 @@ select:-webkit-autofill:focus {
     -webkit-text-fill-color: $font;
     -webkit-box-shadow: 0 0 0px 1000px white inset;
     transition: background-color 5000s ease-in-out 0s;
+}
+
+.titleShadow{
+    text-shadow: 3px 3px 5px #4f4f4f;
+    color: black;
 }
