@@ -1177,4 +1177,16 @@ select:-webkit-autofill:focus {
     }
 }
 
-//========================================  MEDIA QUERIES  ========================================//
+//========================================  SCROLLBAR  ========================================//
+
+::-webkit-scrollbar {
+    width: 14px;
+}
+
+::-webkit-scrollbar-track {
+    background: wheat;
+}
+
+::-webkit-scrollbar-thumb {
+    background: $red;
+}
