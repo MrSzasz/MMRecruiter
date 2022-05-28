@@ -75,43 +75,43 @@
 
                 <!-- =========================  FORM  ========================= -->
 
-                <form>
+                <form id="form">
                     <div class="form-group text-center">
                         <label for="name">
                             <h5>NOMBRE COMPLETO*</h5>
                         </label>
-                        <input type="text" class="form-control text-center" id="name" placeholder="Inserte su nombre"
-                            required>
+                        <input type="text" class="form-control text-center" name="form_name"
+                            placeholder="Inserte su nombre" required>
                     </div>
                     <div class="form-group text-center">
                         <label for="mail">
                             <h5>EMAIL*</h5>
                         </label>
-                        <input type="email" class="form-control text-center" id="mail" placeholder="nombre@ejemplo.com"
-                            required>
+                        <input type="email" class="form-control text-center" name="form_mail"
+                            placeholder="nombre@ejemplo.com" required>
                     </div>
                     <div class="form-group text-center">
                         <label for="brand">
                             <h5>EMPRESA</h5>
                         </label>
-                        <input type="text" class="form-control text-center" id="brand"
+                        <input type="text" class="form-control text-center" name="form_brand"
                             placeholder="Inserte el nombre de la empresa">
                     </div>
                     <div class="form-group text-center">
                         <label for="subject">
                             <h5>ASUNTO*</h5>
                         </label>
-                        <input type="text" class="form-control text-center w-100" id="subject"
+                        <input type="text" class="form-control text-center w-100" name="form_subject"
                             placeholder="Inserte el asunto" required>
                     </div>
                     <div class="form-group text-center">
                         <label for="text">
                             <h5>MENSAJE*</h5>
                         </label>
-                        <textarea class="form-control" id="text" rows="5" placeholder="Escriba aquí..."
+                        <textarea class="form-control" name="form_text" rows="5" placeholder="Escriba aquí..."
                             required></textarea>
                     </div>
-                    <button type="submit" class="cssbuttons-io-button"> ENVIAR
+                    <!-- <button id="button" type="submit" value="Send Email" class="cssbuttons-io-button"> ENVIAR
                         <div class="icon">
                             <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M0 0h24v24H0z" fill="none"></path>
@@ -120,16 +120,17 @@
                                     fill="currentColor"></path>
                             </svg>
                         </div>
-                    </button>
+                    </button> -->
+                    <input type="submit" id="button" value="ENVIAR" class="sendMail" >
                     <span>*obligatorio</span>
 
-                <!-- =========================  IMG FORM  ========================= -->
+                    <!-- =========================  IMG FORM  ========================= -->
 
                     <img class="imgFromSvg" src="../resources/doodles/mailing_new-xl-denoised_upscaled_x2.png" alt="">
                 </form>
             </div>
 
-                <!-- =========================  FEEDBACK  ========================= -->
+            <!-- =========================  FEEDBACK  ========================= -->
 
             <div class="secondSectionMainContact">
                 <h2 class="text-center divider titleShadow">QUE DICEN NUESTROS CLIENTES</h2>
@@ -215,9 +216,9 @@
                     </a>
                 </button>
             </div>
-            
+
             <!-- =========================  CONTACTO  ========================= -->
-            
+
             <div class="footerItem">
                 <h2>CONTACTO</h2>
                 <button class="cssbuttons-io-button mb-3"> CONTACTANOS
@@ -260,6 +261,14 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init();
+    </script>
+
+    <!-- =========================  EMAILJS  ========================= -->
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+    <script type="text/javascript">
+        emailjs.init('TZNQnYpjhLuJo5XrB')
     </script>
 </body>
 

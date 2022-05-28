@@ -20,3 +20,25 @@ if (detector.phone() != null) {
 } else if (browserName == 'Mozilla Firefox') {
     $('.hasJs').toggleClass('blur', true);
 }
+
+
+const btn = document.getElementById('button');
+
+document.getElementById('form')
+ .addEventListener('submit', function(event) {
+   event.preventDefault();
+
+   btn.value = 'ENVIANDO...';
+
+   const serviceID = 'service_09cark9';
+   const templateID = 'template_lpqu7kb';
+
+   emailjs.sendForm(serviceID, templateID, this)
+    .then(() => {
+      btn.value = 'ENVIAR';
+      alert('Mensaje enviado correctamente!');
+    }, (err) => {
+      btn.value = 'ENVIAR';
+      alert(JSON.stringify(err));
+    });
+});
