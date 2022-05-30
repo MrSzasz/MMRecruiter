@@ -80,6 +80,16 @@ header {
         position: absolute;
         background-color: transparent !important;
 
+        .navbar-brand {
+            font-size: 40px;
+            transition: ease all .25s;
+
+            &:hover {
+                color: $red !important;
+                transform: scale(1.05);
+            }
+        }
+
         .active {
             border-radius: 30px;
             padding: 5px 20px !important;
@@ -629,7 +639,8 @@ main {
                     box-shadow: 0 0 0 0.25rem rgba(253, 13, 13, 0.25);
                 }
             }
-            .sendMail{
+
+            .sendMail {
                 background: $red;
                 color: white;
                 font-family: inherit;
@@ -646,7 +657,8 @@ main {
                 width: min-content;
                 padding: 15px 20px;
                 transition: ease all .25s;
-                &:hover{
+
+                &:hover {
                     transform: scale(1.1);
                 }
             }
